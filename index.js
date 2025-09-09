@@ -159,12 +159,14 @@ const displayTreeCart =(treeData)=>{
             <img class="w-[311px] h-[186px] rounded-md" src="${data.image}" alt="">
             <h1  onclick="displayDetails(${data.id})"  class="font-semibold">${data.name}</h1>
             <p>${data.description}</p>
-            <div class="flex justify-between text-center items-center mt-auto ">
-                <button  class="btn btn-soft btn-success rounded-lg">${data.category}</button>
-                <p>৳${data.price}</p>
+            <div class=" mt-auto space-y-3">
+                <div class="flex justify-between text-center items-center mt-auto ">
+                    <button  class="btn btn-soft btn-success rounded-lg">${data.category}</button>
+                    <p>৳${data.price}</p>
 
-            </div>
-            <button onclick="displayYourCart('${data.name}',${data.price})" class="btn btn-success rounded-lg w-full mt-auto ">Add to Cart</button>
+                </div>
+                <button onclick="displayYourCart('${data.name}',${data.price})" class="btn btn-success rounded-lg w-full mt-auto ">Add to Cart</button>
+
         </div>
         `
         allTrees.append(newDiv)
